@@ -40,28 +40,78 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 
 html {
-    position: relative;
-    margin: 0 auto;
     max-width: var(--desktop);
+    margin: 0 auto;
 }
 
 header {
+    position: absolute;   
+    display: flex;
+    flex-direction: row;
+    color: var(--neutral-white);
+}
+
+header img {
+    height: 40px;
+    margin: 3em 2em 3em 7em;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+}
+
+header nav ul {
+    display: flex;
+    margin-top: 3em;
+}
+
+header nav ul li {
+    display: flex;
+    flex-direction: row;
+    font-family: var(--ubuntu);
+    padding: 1em;
+    cursor: pointer;
+}
+
+header nav ul li div {
+    margin: 5px 0 0 8px;
+    width: 5px;
+    height: 5px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+header section {
+    
+}
+
+header button {
+    border: none;
+    background: transparent;
+    color: var(--neutral-white);
+    padding: 10px 30px;
+    border-radius: 20mm;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+header button:hover {
+    background: var(--neutral-white);
+    color: var(--primary-light-red);
+}
+
+/* SECTION ONE */
+.section-one {
     background-image: url("./images/bg-pattern-intro.svg"), linear-gradient(to right, var(--very-light-red), var(--light-red));;
     background-position: left;
     background-size: 100%;
     height: 500px;
     border-bottom-left-radius: 20mm;
-}
-
-header img {
-    height: 40px;
-    margin: 50px 100px 0 100px;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: row;
 }
