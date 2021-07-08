@@ -47,34 +47,37 @@
 html {
     max-width: var(--desktop);
     margin: 0 auto;
+    font-size: var(--font-size);
 }
 
 /* HEADER */
-header {
-    position: absolute;   
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
+header { 
+    position: relative;
+    background-image: url("./images/bg-pattern-intro.svg"), linear-gradient(to right, var(--very-light-red), var(--light-red));;
+    background-position: left;
+    background-size: 100%;
+    border-bottom-left-radius: 20mm;
+    height: 500px;
+    width: 100%;
     color: var(--neutral-white);
-    /* border: 1px solid black; */
 }
 
-header img {
-    height: 40px;
-    margin: 3em 3em 3em 7em;
-}
-
-header nav {
+nav {
     display: flex;
     flex-direction: row;
 }
 
-header nav ul {
+nav img {
+    height: 40px;
+    margin: 3em 3em 3em 9em;
+}
+
+nav ul {
     display: flex;
     margin-top: 3em;
 }
 
-header nav ul li {
+nav ul li {
     display: flex;
     flex-direction: row;
     font-family: var(--ubuntu);
@@ -83,7 +86,7 @@ header nav ul li {
     cursor: pointer;
 }
 
-header nav ul li div {
+nav ul li > div {
     margin: 5px 0 0 8px;
     width: 5px;
     height: 5px;
@@ -92,32 +95,35 @@ header nav ul li div {
     transform: rotate(45deg);
 }
 
-header section {
-    
+nav > div {
+    position: absolute;
+    top: 3.6em;
+    right: 9em;
 }
 
-header button {
-    border: none;
+nav button {
+    border: 1px solid white;
     background: transparent;
     color: var(--neutral-white);
     padding: 10px 30px;
     border-radius: 20mm;
+    border: none;
     transition: .2s ease-in-out;
     cursor: pointer;
 }
 
-header button:hover {
+nav button:nth-child(2) {
     background: var(--neutral-white);
     color: var(--primary-light-red);
 }
 
+nav button:nth-child(2):hover {
+    background: var(--primary-very-light-red);
+    color: var(--neutral-white);
+}
+
 /* SECTION ONE */
 .section-one {
-    background-image: url("./images/bg-pattern-intro.svg"), linear-gradient(to right, var(--very-light-red), var(--light-red));;
-    background-position: left;
-    background-size: 100%;
-    height: 500px;
-    border-bottom-left-radius: 20mm;
     color: var(--neutral-white);
     display: flex;
     flex-direction: column;
@@ -128,6 +134,7 @@ header button:hover {
 .section-one h1 {
     font-size: 4em;
     font-family: var(--overpass);
+    padding-top: 1em;
 }
 
 .section-one p {
@@ -149,6 +156,7 @@ header button:hover {
 .section-one button:nth-child(1) {
     background: var(--neutral-white);
     color: var(--primary-light-red);
+    border: none;
 }
 
 .section-one button:nth-child(1):hover {
@@ -162,6 +170,17 @@ header button:hover {
 }
 
 /* SECTION TWO */
-.section-two {
-
+/* .section-two {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+.section-two h2 {
+    font-size: 2.6em;
+    font-family: var(--overpass);
+    color: var(--primary-very-dark-blue);
+    padding: 150px;
+} */
