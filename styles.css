@@ -57,7 +57,7 @@ header {
     background-position: left;
     background-size: 100%;
     border-bottom-left-radius: 20mm;
-    height: 500px;
+    height: 530px;
     width: 100%;
     color: var(--neutral-white);
 }
@@ -170,10 +170,12 @@ nav button:nth-child(2):hover {
 }
 
 /* SECTION TWO */
-/* .section-two {
+.section-two {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     align-items: center;
     justify-content: center;
 }
@@ -182,5 +184,31 @@ nav button:nth-child(2):hover {
     font-size: 2.6em;
     font-family: var(--overpass);
     color: var(--primary-very-dark-blue);
-    padding: 150px;
-} */
+    padding: 2.6em 0 2em 0;
+}
+
+.section-two > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.section-two > div > div {
+    margin: 0 0 0 25em;
+    color: var(--primary-very-dark-blue);
+    width: 550px;
+}
+
+.section-two h3 {
+    font-size: 1.8em;
+    font-family: var(--overpass);
+    padding-bottom: 1em;
+}
+
+.section-two p {
+    font-size: 1.2em;
+    padding-bottom: 4em;
+}
+
+.section-two > div img {
+    margin: -12em 0 0 6em;
+}
